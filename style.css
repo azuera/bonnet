@@ -1,5 +1,6 @@
-td ,tr ,table,th{
+td ,tr,table,th{
     border:solid 1px black;
+   
 }
 .green{
     color: green;
