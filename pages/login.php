@@ -1,6 +1,6 @@
 <?php
 $pageTitle = "connexion";
-include 'includes/header.php';
+
 $errors=[];
 //trim evite de faite de mettre des espace
 if (isset($_POST['username'])) {
@@ -17,9 +17,6 @@ if (isset($_POST['username'])) {
     $errors[]='username vide';
   }
 
-  if(empty($mdp)){
-    $errors[]='mot de passe vide';
-  }
 
   if(empty($errors)){ 
     $_SESSION['username'] = $_POST['username'];
@@ -53,5 +50,3 @@ if (isset($_POST['username'])) {
 </form>
 
 
-<?php 
-include 'includes/footer.php' ?>
