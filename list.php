@@ -12,6 +12,9 @@ include 'includes/header.php';
             prix
         </th>
         <th>
+            prix ht
+        </th>
+        <th>
             desc
         </th>
     </tr>
