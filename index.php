@@ -9,44 +9,12 @@
     <title>Document</title>
 </head>
 <body>
-<?php $produits=[ [
-                    "nom"=>"bonnet en laine",
-                    "prix"=>10,
-                    "desc"=>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis a leo diam. Quisque lorem orci, accumsan quis dolor sed, gravida."
-                    ],
-                    [
-                        "nom"=>"bonnet en laine bio",
-                        "prix"=>14,
-                        "desc"=>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis a leo diam. Quisque lorem orci, accumsan quis dolor sed, gravida."
-                    ],
-    [
-        "nom"=>"bonnet en laine et cachemir",
-        "prix"=>20,
-        "desc"=>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis a leo diam. Quisque lorem orci, accumsan quis dolor sed, gravida."
-    ],
-    [
-        "nom"=>"bonnet arc en ciel",
-        "prix"=>12,
-        "desc"=>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis a leo diam. Quisque lorem orci, accumsan quis dolor sed, gravida."
-    ],
-];
 
-function tva(float $prixTTC): float
-{
-    return $prixTTC/1.2;
-}
-function displaybonnet(int$id,array $produits) :void{
-<tr>
-        <td><?php  echo $produit['nom']; ?> </td>
-<td <?php  if ($produit['prix']<=12){
-    echo "class='green'";}
-else {echo"class='red'";}?> >
-    <?php echo $prix; ?></td>
-<td><?php echo number_format(tva($prix), 2, ',', ' '); ?></td>
-<td><?php  echo $produit['desc']; ?></td>
+<?php
+include 'variables.php';
+include 'fonction.php'
 
-</tr>
-}
+
 ?>
 
 <table>
@@ -63,13 +31,9 @@ else {echo"class='red'";}?> >
     </tr>
 
 
-            <?php foreach ($produits as $index => $produit){
-                $prix = $produit['prix'];
-
-                displaybonnet($index,$produit);
-
-
-        } ?>
+            <?php foreach ($produits as $index => $produit){ 
+                displayBonnet ($index,$produit);
+} ?>
 
 </table>
 
