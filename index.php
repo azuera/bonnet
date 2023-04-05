@@ -1,41 +1,34 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="style.css">
-    <title>Document</title>
-</head>
-<body>
-
 <?php
-include 'variables.php';
-include 'fonction.php'
-
+$pageTitle = "super Bienvenue";
+include 'includes/header.php';
+?>
+<div class="container-fluid d-flex p-5 col-12 justify-content-around">
+<?php
+$i=0;
+foreach ($produits as $index => $produit ){
+    $i++;
+    if($i >3){
+        break;
+    }
+    ?>
+   
+    <div class="card p-5 " style="width: 18rem;">
+  <img src="<?php echo $produit['img']?>" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title "><?php echo $produit['nom'];?></h5>
+    <p class="card-text"><?php echo $produit['desc'];?></p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+    <?php
+}
 
 ?>
-
-<table>
-    <tr>
-        <th>
-            produit
-        </th>
-        <th>
-            prix
-        </th>
-        <th>
-            desc
-        </th>
-    </tr>
+</div>
+<div class="d-flex justify-content-center">
+    <a href="list.php" class="btn btn-primary "> viens on est bien!!!!</a>
+</div>
 
 
-            <?php foreach ($produits as $index => $produit){ 
-                displayBonnet ($index,$produit);
-} ?>
-
-</table>
-
-</body>
-</html>
+<?php 
+include 'includes/footer.php' ?>
