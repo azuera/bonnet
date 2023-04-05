@@ -1,5 +1,8 @@
 <?php
-session_start();
+ if(!isset($_SESSION)) 
+ { 
+     session_start(); 
+ } 
 
 // ? pa rametre get
 include 'includes/variables.php';
@@ -23,31 +26,31 @@ include 'includes/fonction.php';
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">super bonnet ici</a>
+    <a class="navbar-brand" href="?page=home"">super bonnet ici</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="index.php">Home</a>
+          <a class="nav-link active" aria-current="page" href="?page=home">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="list.php">Liste</a>
+          <a class="nav-link" href="?page=list">Liste</a>
         </li>
         <?php
                 if (isset($_SESSION['username'])){ 
                     ?>
                     <li class="nav-item">
-                        <a class="nav-link" href="login.php"><?php echo "bonjour ".$_SESSION['username']; ?></a>
+                        <a class="nav-link" href="?page=login"><?php echo "bonjour ".$_SESSION['username']; ?></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="logout.php">byebyedeco</a>
+                        <a class="nav-link" href="?page=logout">byebyedeco</a>
                     </li>
         
              <?php   }else { ?>
                 <li class="nav-item">
-          <a class="nav-link" href="login.php">connexion</a>
+          <a class="nav-link" href="?page=login">connexion</a>
         </li>
            <?php  } ?>
         
