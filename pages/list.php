@@ -17,6 +17,10 @@ $pageTitle = "he Bienvenue";
         <th>
             desc
         </th>
+        
+        <th>
+            panier
+        </th>
     </tr>
 
 
