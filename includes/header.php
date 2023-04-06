@@ -41,6 +41,9 @@ include 'includes/fonction.php';
         <li class="nav-item">
           <a class="nav-link" href="?page=cart">panier</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="?page=formulaire">contactez-moi</a>
+        </li>
         <?php
                 if (isset($_SESSION['username'])){ 
                     ?>
