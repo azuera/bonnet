@@ -17,7 +17,7 @@ foreach ($produits as $index => $produit ){
   <div class="card-body">
     <h5 class="card-title "><?php echo $produit['nom'];?></h5>
     <p class="card-text"><?php echo $produit['desc'];?></p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
+    <a href="?page=cart&index=<?=$index;?>" class="btn btn-primary">ajouter au panier</a>
   </div>
 </div>
     <?php
