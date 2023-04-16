@@ -24,8 +24,8 @@ $pageTitle = "he Bienvenue";
     </tr>
 
 
-            <?php foreach ($produits as $index => $produit){ 
-                displayBonnet ($index,$produit);
+            <?php foreach ($produits as  $produit){ 
+                displayBonnet ($produit);
 } ?>
 
 </table>

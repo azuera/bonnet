@@ -9,8 +9,8 @@ if (isset($_POST['subject'])){
 
     if (empty($subject)) {
       $errors[]= 'sujet manquant';
-    }elseif(strlen($subject) <= 15){
-      $errors[]='veuillez entrer un sujet plus long( 15 cara mini)';
+    }elseif(strlen($subject) <= 10){
+      $errors[]='veuillez entrer un sujet plus long( 10 cara mini)';
     }
 }
 if (isset($_POST['email'])){
@@ -28,7 +28,7 @@ if (isset($_POST['T$Textarea'])){
   if (empty($Textarea)) {
     $errors[]= 'sujet manquant';
   }elseif(strlen($Textarea)<=20){
-    $errors[]='veuillez entrer un sujet plus long( 100 cara mini)';
+    $errors[]='veuillez entrer un sujet plus long( 20 cara mini)';
   }
 }
 if(isset($_POST['Textarea'])&& empty($errors)){ 

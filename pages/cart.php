@@ -58,8 +58,8 @@ var_dump($_SESSION['cart']);
 <?php
     $total=0;
     foreach ($_SESSION['cart'] as $index => $quantity) {
-        $produit = $produits[$index]; 
-        $price = $produit['prix'] * $quantity;
+        $produit = findById($produits,$index); 
+        $price = $produit->getPrix() * $quantity;
         $total += $price;
         ?>
         
@@ -69,10 +69,10 @@ var_dump($_SESSION['cart']);
             <?= $index; ?>
         </td>
         <td>
-            <?= $produit['nom']; ?>
+            <?= $produit->getNom(); ?>
         </td>
         <td>
-            <?= $produit['prix']; ?>
+            <?= $produit->getPrix(); ?>
         </td>
 
         <td>
