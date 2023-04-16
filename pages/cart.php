@@ -59,6 +59,9 @@ var_dump($_SESSION['cart']);
     $total=0;
     foreach ($_SESSION['cart'] as $index => $quantity) {
         $produit = findById($produits,$index); 
+        if(empty($produits)){
+            continue;
+        }
         $price = $produit->getPrix() * $quantity;
         $total += $price;
         ?>
