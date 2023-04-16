@@ -1,32 +1,32 @@
-<?php $produits=[ [
-                    "nom"=>"bonnet en laine",
-                    "prix"=>10,
-                    "desc"=>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis a leo diam. Quisque lorem orci, accumsan quis dolor sed, gravida.",
-                    "img"=>"https://picsum.photos/200"
-
-                    ],
-                    [
-                        "nom"=>"bonnet en laine bio",
-                        "prix"=>14,
-                        "desc"=>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis a leo diam. Quisque lorem orci, accumsan quis dolor sed, gravida.",
-                        "img"=>"https://picsum.photos/200"
-
-                    ],
-                    [
-                        "nom"=>"bonnet en laine et cachemir",
-                        "prix"=>20,
-                        "desc"=>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis a leo diam. Quisque lorem orci, accumsan quis dolor sed, gravida.",
-                        "img"=>"https://picsum.photos/200"
-
-                    ],
-                    [
-                        "nom"=>"bonnet arc en ciel",
-                        "prix"=>12,
-                        "desc"=>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis a leo diam. Quisque lorem orci, accumsan quis dolor sed, gravida.",
-                        "img"=>"https://picsum.photos/200"
-
-                    ],
-
-];
+<?php $produits=[ 
+    (new Produit())
+    ->setIndex(0)
+    ->setNom('bonnet en laine')
+    ->setprix(5)
+    ->setDesc("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis a leo diam. Quisque lorem orci, accumsan quis dolor sed, gravida.")
+    ->setImg("https://picsum.photos/200")
+    ,
+    (new Produit())
+    ->setIndex(1)
+    ->setNom('bonnet en laine bio')
+    ->setprix(30)
+    ->setDesc("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis a leo diam. Quisque lorem orci, accumsan quis dolor sed, gravida.")
+    ->setImg("https://picsum.photos/200")
+    ,
+    (new Produit())
+    ->setIndex(2)
+    ->setNom('bonnet en laine et cachemir')
+    ->setprix(20)
+    ->setDesc("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis a leo diam. Quisque lorem orci, accumsan quis dolor sed, gravida.")
+    ->setImg("https://picsum.photos/200")
+    ,
+    (new Produit())
+    ->setIndex(3)
+    ->setNom('bonnet arc en ciel')
+    ->setprix(15)
+    ->setDesc("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis a leo diam. Quisque lorem orci, accumsan quis dolor sed, gravida.")
+    ->setImg("https://picsum.photos/200")
+    ,
+        ];
 
 $mdp='azaz';
