@@ -5,6 +5,7 @@
     ->setprix(5)
     ->setDesc("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis a leo diam. Quisque lorem orci, accumsan quis dolor sed, gravida.")
     ->setImg("https://picsum.photos/200")
+    ->addMaterial("wool")
     ,
     (new Produit())
     ->setIndex(1)
@@ -12,6 +13,7 @@
     ->setprix(30)
     ->setDesc("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis a leo diam. Quisque lorem orci, accumsan quis dolor sed, gravida.")
     ->setImg("https://picsum.photos/200")
+    ->addMaterial("wool")
     ,
     (new Produit())
     ->setIndex(2)
@@ -19,6 +21,7 @@
     ->setprix(20)
     ->setDesc("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis a leo diam. Quisque lorem orci, accumsan quis dolor sed, gravida.")
     ->setImg("https://picsum.photos/200")
+    ->addMaterial("wool")
     ,
     (new Produit())
     ->setIndex(3)
@@ -26,6 +29,7 @@
     ->setprix(15)
     ->setDesc("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis a leo diam. Quisque lorem orci, accumsan quis dolor sed, gravida.")
     ->setImg("https://picsum.photos/200")
+    ->addMaterial("wool")
     ,
         ];
 
