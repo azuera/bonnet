@@ -1,13 +1,12 @@
 <?php
 class Produit{
     protected ?int $index;
-
-    
     protected ?string $nom;
     protected ?float $prix =0;
     protected ?string $desc;
     protected ?string $img;
 
+    const AVAILABLE_SIZES = ['S', 'M', 'L', 'XL'];
 
 	/**
 	 * @return int|null
@@ -88,4 +87,9 @@ class Produit{
 		$this->nom = $nom;
 		return $this;
 	}
+    public function getAvailableSizes()
+    {
+        return self::AVAILABLE_SIZES;
+    }
+
 }
