@@ -1,4 +1,5 @@
 <?php
+
 class Produit{
     protected ?int $index;
     protected ?string $nom;
@@ -10,7 +11,7 @@ class Produit{
 
     public const AVAILABLE_SIZES = ['S', 'M', 'L', 'XL'];
     public const AVAILABLE_MATERIALS = ['laine', 'cachemire', 'soie', 'coton'];
-   
+
 	/**
 	 * @return int|null
 	 */
@@ -98,10 +99,7 @@ class Produit{
     {
         return self::AVAILABLE_MATERIALS;
     }
-    public function getAvailablePrice()
-    {
-        return self::AVAILABLE_PRICE;
-    }
+
 
 
 	/**

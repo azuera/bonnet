@@ -1,8 +1,11 @@
 <?php
 
+
 $produitsFiltred = $produits;
 $prixMax=null;
 $prixMini=null;
+$material = null;
+$size=null;
 
 
 
@@ -18,6 +21,22 @@ if(!empty($_POST['prix-max'])){
 
     $produitsFiltred = array_filter($produitsFiltred, function (Produit $produit) use ($prixMax){
         return $produit->getPrix()<= $prixMax;
+    });
+}
+if(!empty($_POST['material'])) {
+    $material = trim($_POST['material']);
+
+    $produitsFiltred = array_filter($produitsFiltred, function (Produit $produit) use ($material) {
+
+        return in_array($material,$produit->getMaterials());
+    });
+}
+if(!empty($_POST['size'])){
+    $size = trim($_POST['size']);
+
+    $produitsFiltred = array_filter($produitsFiltred, function (Produit $produit) use ($size){
+
+        return in_array($size,$produit->getSizes());
     });
 }
 ?>
@@ -37,12 +56,25 @@ if(!empty($_POST['prix-max'])){
     <?php 
     foreach (Produit::AVAILABLE_MATERIALS as $value => $name) {
         ?>
-        <option value="<?=$value;?>"<?= $name;?>></option>
+        <option value="<?=$name;?>" <?php if($name == $material) {echo'selected';}?>><?php  echo $name;?></option>
      <?php   
     }
     ?>
   </select>
 </div>
+    <div class="mb-3">
+        <label for="size" class="form-label">size</label>
+        <select  id="size" name="size" >
+            <option value=""> choisissez votre taille</option>
+            <?php
+            foreach (Produit::AVAILABLE_SIZES as $value => $name) {
+                ?>
+                <option value="<?=$name;?>" <?php if($name == $size){echo'selected';}?>><?php  echo $name;?></option>
+                <?php
+            }
+            ?>
+        </select>
+    </div>
 
   <button type="submit" class="btn btn-primary">GO ENVOI</button>
 </form>
