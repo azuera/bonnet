@@ -5,7 +5,12 @@
     ->setprix(5)
     ->setDesc("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis a leo diam. Quisque lorem orci, accumsan quis dolor sed, gravida.")
     ->setImg("https://picsum.photos/200")
-    ->addMaterial("wool")
+    ->addMaterial("cachemire")
+        ->addSize('S')
+        ->addSize('M')
+        ->addSize('L')
+        ->addSize('XL')
+
     ,
     (new Produit())
     ->setIndex(1)
@@ -13,7 +18,11 @@
     ->setprix(30)
     ->setDesc("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis a leo diam. Quisque lorem orci, accumsan quis dolor sed, gravida.")
     ->setImg("https://picsum.photos/200")
-    ->addMaterial("wool")
+    ->addMaterial("laine")
+        ->addSize('S')
+        ->addSize('M')
+        ->addSize('L')
+        ->addSize('XL')
     ,
     (new Produit())
     ->setIndex(2)
@@ -21,7 +30,11 @@
     ->setprix(20)
     ->setDesc("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis a leo diam. Quisque lorem orci, accumsan quis dolor sed, gravida.")
     ->setImg("https://picsum.photos/200")
-    ->addMaterial("wool")
+    ->addMaterial("soie")
+        ->addSize('S')
+        ->addSize('M')
+        ->addSize('L')
+        ->addSize('XL')
     ,
     (new Produit())
     ->setIndex(3)
@@ -29,7 +42,11 @@
     ->setprix(15)
     ->setDesc("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis a leo diam. Quisque lorem orci, accumsan quis dolor sed, gravida.")
     ->setImg("https://picsum.photos/200")
-    ->addMaterial("wool")
+    ->addMaterial("coton")
+        ->addSize('S')
+        ->addSize('M')
+        ->addSize('L')
+        ->addSize('XL')
     ,
         ];
 
