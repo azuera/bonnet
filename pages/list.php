@@ -1,52 +1,18 @@
 <?php
 
 
-$produitsFiltred = $produits;
-$prixMax = null;
-$prixMini = null;
-$material = null;
-$size = null;
+$produitsFiltred  = new BeanieFilter($produits, $_POST);
 
 
-if (!empty($_POST['prix-mini'])) {
-    $prixMini = floatval($_POST['prix-mini']);
-
-    $produitsFiltred = array_filter($produitsFiltred, function (Produit $produit) use ($prixMini) {
-        return $produit->getPrix() >= $prixMini;
-    });
-}
-if (!empty($_POST['prix-max'])) {
-    $prixMax = floatval($_POST['prix-max']);
-
-    $produitsFiltred = array_filter($produitsFiltred, function (Produit $produit) use ($prixMax) {
-        return $produit->getPrix() <= $prixMax;
-    });
-}
-if (!empty($_POST['material'])) {
-    $material = trim($_POST['material']);
-
-    $produitsFiltred = array_filter($produitsFiltred, function (Produit $produit) use ($material) {
-
-        return in_array($material, $produit->getMaterials());
-    });
-}
-if (!empty($_POST['size'])) {
-    $size = trim($_POST['size']);
-
-    $produitsFiltred = array_filter($produitsFiltred, function (Produit $produit) use ($size) {
-
-        return in_array($size, $produit->getSizes());
-    });
-}
 ?>
 <form action='' method="post">
     <div class="mb-3">
         <label for="prix-mini" class="form-label">prix-mini</label>
-        <input type="number" class="form-control" id="prix-mini" name="prix-mini" value="<?= $prixMini; ?>">
+        <input type="number" class="form-control" id="prix-mini" name="prix-mini" value="<?= $produitsFiltred->getPrixMini(); ?>">
     </div>
     <div class="mb-3">
         <label for="prix-max" class="form-label">prix-maxi</label>
-        <input type="number" class="form-control" id="prix-max" name="prix-max" value="<?= $prixMax; ?>">
+        <input type="number" class="form-control" id="prix-max" name="prix-max" value="<?= $produitsFiltred->getPrixMax(); ?>">
     </div>
     <div class="mb-3">
         <label for="material" class="form-label">matiere</label>
@@ -55,7 +21,7 @@ if (!empty($_POST['size'])) {
             <?php
             foreach (Produit::AVAILABLE_MATERIALS as $value => $name) {
                 ?>
-                <option value="<?= $name; ?>" <?php if ($name == $material) {
+                <option value="<?= $name; ?>" <?php if ($name == $produitsFiltred->getMaterial()) {
                     echo 'selected';
                 } ?>><?php echo $name; ?></option>
                 <?php
@@ -70,7 +36,7 @@ if (!empty($_POST['size'])) {
             <?php
             foreach (Produit::AVAILABLE_SIZES as $value => $name) {
                 ?>
-                <option value="<?= $name; ?>" <?php if ($name == $size) {
+                <option value="<?= $name; ?>" <?php if ($name == $produitsFiltred->getSize()) {
                     echo 'selected';
                 } ?>><?php echo $name; ?></option>
                 <?php
@@ -103,7 +69,7 @@ if (!empty($_POST['size'])) {
     </tr>
 
 
-    <?php foreach ($produitsFiltred as $produit) {
+    <?php foreach ($produitsFiltred->getResult() as $produit) {
         displayBonnet($produit);
     } ?>
 
