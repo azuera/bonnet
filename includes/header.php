@@ -8,6 +8,7 @@
 require_once 'autoload.php';
 include 'includes/variables.php';
 include 'includes/fonction.php';
+$pageTitle="hello";
 ?>
 
 <!doctype html>
