@@ -5,6 +5,8 @@
  } 
 
 // ? pa rametre get
+
+require_once 'db.inc.php';
 require_once 'autoload.php';
 include 'includes/variables.php';
 include 'includes/fonction.php';
