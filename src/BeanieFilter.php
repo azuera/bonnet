@@ -1,7 +1,11 @@
 <?php
 
 class BeanieFilter
-{protected  array $produits =[];
+{
+    protected  ?int $id;
+
+
+    protected  array $produits =[];
 protected ?float $prixMini = null;
 
 protected ?float $prixMax = null;
@@ -57,6 +61,17 @@ public function __construct(array $produits ,array $filters){
         return $produits;
     }
 
+
+    public function getId(): ?int
+    {
+        return $this->id;
+    }
+
+
+    public function setId(?int $id): void
+    {
+        $this->id = $id;
+    }
 
 
 

@@ -5,8 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="538bb65c-9596-4d63-8cfa-7153b1c2833e" name="Changes" comment="filter + refacto">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/list.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/list.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/autoload.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/autoload.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/variables.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/variables.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/formulaire.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/formulaire.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BeanieFilter.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/BeanieFilter.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Formulaire.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Formulaire.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,11 +26,11 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;
   }
-}]]></component>
+}</component>
   <component name="GithubPullRequestsUISettings">
     <option name="selectedUrlAndAccountId">
       <UrlAndAccount>
@@ -46,13 +53,13 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "D:/APP/www/bonnet",
+    "last_opened_file_path": "D:/APP/www/bonnet/includes",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "terminal",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -61,6 +68,11 @@
     ]
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\APP\www\bonnet\includes" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -72,7 +84,8 @@
       <workItem from="1680609828956" duration="9283000" />
       <workItem from="1681724488466" duration="1441000" />
       <workItem from="1681805741342" duration="41000" />
-      <workItem from="1681805783773" duration="23768000" />
+      <workItem from="1681805783773" duration="24361000" />
+      <workItem from="1681889076592" duration="13123000" />
     </task>
     <servers />
   </component>

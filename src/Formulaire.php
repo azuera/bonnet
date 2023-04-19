@@ -2,6 +2,10 @@
 
 class Formulaire
 {
+    protected  ?int $index;
+
+
+
     protected ?string $subject='';
     protected ?string $email='';
     protected ?string $Textarea='';
@@ -25,6 +29,16 @@ class Formulaire
 
 
 
+    }
+    public function getIndex(): ?int
+    {
+        return $this->index;
+    }
+
+
+    public function setIndex(?int $index): void
+    {
+        $this->index = $index;
     }
 
 
