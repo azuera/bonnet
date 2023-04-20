@@ -1,7 +1,23 @@
 <?php
 
 
+
+$sqlProduit='SELECT produit_index, produit_nom,produit_prix,produit_desc,produit_img,size.size_name,material.material_name
+FROM produit
+INNER JOIN produit_material ON produit.produit_index = produit_material.id_produit
+INNER JOIN material ON material.material_id = produit_material.id_material
+INNER JOIN produit_size ON produit.produit_index = produit_size.id_size
+INNER JOIN size ON size.size_id = produit_size.id_size';
+$statement=$connection->query($sqlProduit);
+$produitsData = $statement->fetchAll();
+$produitFactory=new ProduitFactory();
+$produits=[];
+foreach ($produitsData as $produitData) {
+    $produits[]=$produitFactory->create($produitData);
+    var_dump($produitData);
+}
 $produitsFiltred  = new BeanieFilter($produits, $_POST);
+
 
 
 ?>
