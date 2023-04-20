@@ -5,15 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="538bb65c-9596-4d63-8cfa-7153b1c2833e" name="Changes" comment="filter + refacto">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/75c6bce2-88c0-4638-93ae-875eda8e5e4a.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/75c6bce2-88c0-4638-93ae-875eda8e5e4a.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/autoload.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/autoload.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fixtures/produit.php" beforeDir="false" afterPath="$PROJECT_DIR$/fixtures/produit.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/includes/variables.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/variables.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/formulaire.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/formulaire.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BeanieFilter.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/BeanieFilter.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Formulaire.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Formulaire.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/home.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/home.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/list.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/list.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Produit.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Produit.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,27 +46,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "D:/APP/www/bonnet/includes",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/APP/www/bonnet/includes&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\APP\www\bonnet\includes" />
@@ -85,7 +84,8 @@
       <workItem from="1681724488466" duration="1441000" />
       <workItem from="1681805741342" duration="41000" />
       <workItem from="1681805783773" duration="24361000" />
-      <workItem from="1681889076592" duration="13123000" />
+      <workItem from="1681889076592" duration="14587000" />
+      <workItem from="1681977921665" duration="23129000" />
     </task>
     <servers />
   </component>

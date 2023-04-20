@@ -1,11 +1,23 @@
 <?php
+/** @var PDOStatement  $statement*/
 $pageTitle = "super Bienvenue";
+$sqlProduit='SELECT produit_index, produit_nom,produit_prix,produit_desc,produit_img,size.size_name,material.material_name
+FROM produit
+INNER JOIN produit_material ON produit.produit_index = produit_material.id_produit
+INNER JOIN material ON material.material_id = produit_material.id_material
+INNER JOIN produit_size ON produit.produit_index = produit_size.id_size
+INNER JOIN size ON size.size_id = produit_size.id_size';
+$statement=$connection->query($sqlProduit);
+$produits = $statement->fetchAll();
+$produitFactory=new ProduitFactory();
 
 ?>
 <div class="container-fluid d-flex p-5 col-12 justify-content-around">
 <?php
 $i=0;
-foreach ($produits as $produit ){
+foreach ($produits as $produitData ){
+    $produit = $produitFactory->create($produitData);
+
     $i++;
     if($i >3){
         break;

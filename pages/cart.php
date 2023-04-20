@@ -1,5 +1,5 @@
 <?php
-global $produits;
+
 $cart = new Cart();
 
 $isCartModified = $cart->handle($_GET);

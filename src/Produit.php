@@ -1,7 +1,9 @@
 <?php
 
 class Produit{
-    protected ?int $index;
+
+
+    protected ?int $index ;
     protected ?string $nom;
     protected ?float $prix =0.0;
     protected ?string $desc;
