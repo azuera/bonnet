@@ -14,7 +14,7 @@ $produitFactory=new ProduitFactory();
 $produits=[];
 foreach ($produitsData as $produitData) {
     $produits[]=$produitFactory->create($produitData);
-    var_dump($produitData);
+
 }
 $produitsFiltred  = new BeanieFilter($produits, $_POST);
 
