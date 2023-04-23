@@ -4,14 +4,14 @@ function tva(float $prixTTC): float
     return $prixTTC/1.2;
 }
 
-function findById(array $produits, int $index): ?Produit{
-foreach ($produits as $produit) {
-    if($produit->getIndex()==$index){
-        return $produit;
-    }
-}
-return null;
-}
+//function findById(array $produits, int $index): ?Produit{
+//foreach ($produits as $produit) {
+//    if($produit->getIndex()==$index){
+//        return $produit;
+//    }
+//}
+//return null;
+//}
 
 function displayBonnet(  produit $produit): void{
     $prix = $produit->getPrix(); ?>

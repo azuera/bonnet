@@ -21,6 +21,7 @@ foreach ($produits as $produitData ){
     $i++;
     if($i >3){
         break;
+
     }
     ?>
    
