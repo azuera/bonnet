@@ -1,4 +1,4 @@
-<?php 
+<?php
 ob_start();
 
 
@@ -8,7 +8,7 @@ $page = 'home';
 if(isset($_GET['page'])){
     $page =$_GET['page'];
 }
-include 'pages/'.$page.'.php';
+include 'src/view/'.$page.'.php';
 include 'includes/footer.php';
 ob_end_flush();
 ?>

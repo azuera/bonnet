@@ -1,6 +1,7 @@
 <?php
 
 
+use Model\Produit;
 
 $sqlSelectMat="SELECT material_id, material_name FROM `material` ";
 $statementSelectMat = $connection->query($sqlSelectMat);

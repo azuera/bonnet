@@ -1,5 +1,8 @@
 <?php
 /** @var PDOStatement  $statement*/
+
+use Service\ProduitFactory;
+
 $pageTitle = "super Bienvenue";
 $sqlProduit='SELECT produit_index, produit_nom,produit_prix,produit_desc,produit_img,size.size_name,material.material_name
 FROM produit

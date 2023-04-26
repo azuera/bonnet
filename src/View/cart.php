@@ -1,6 +1,8 @@
 <?php
 
 
+use Model\Cart;
+use Service\ProduitFactory;
 
 $cart = new Cart();
 

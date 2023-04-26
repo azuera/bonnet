@@ -1,5 +1,7 @@
 <?php
 
+use Model\Formulaire;
+
 $formulaire = new Formulaire();
 if (!empty($_POST)) {
     $formulaire = new Formulaire($_POST);
