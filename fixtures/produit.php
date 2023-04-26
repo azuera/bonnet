@@ -122,11 +122,13 @@ foreach ($produits as $produit) {
 
     $jointureSize = "INSERT INTO `produit_size`(`id_produit`, `id_size`) VALUES (:id_produit,:id_size)";
     $statementSize = $connection->prepare($jointureSize);
-    foreach ($produit->getSizes() as $name)
+    foreach ($produit->getSizes() as $name){
         $idSize = $sizes[$name];
-    $statementSize->bindValue(":id_produit", $id, PDO:: PARAM_INT);
-    $statementSize->bindValue(":id_size", $idSize, PDO:: PARAM_INT);
-    $statementSize->execute();
+        $statementSize->bindValue(":id_produit", $id, PDO:: PARAM_INT);
+        $statementSize->bindValue(":id_size", $idSize, PDO:: PARAM_INT);
+        $statementSize->execute();
+    }
+
 
 }
 

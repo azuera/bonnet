@@ -57,6 +57,9 @@ $pageTitle="hello";
                     <li class="nav-item">
                         <a class="nav-link" href="?page=logout">byebyedeco</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="?page=creaProduit">créez votre bonnet</a>
+                    </li>
         
              <?php   }else { ?>
                 <li class="nav-item">
