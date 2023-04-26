@@ -1,13 +1,20 @@
 <?php
 
+$sqlSelectMat="SELECT material_id, material_name FROM `material` ";
+$statementSelectMat = $connection->query($sqlSelectMat);
+$materials = $statementSelectMat->fetchAll(PDO::FETCH_ASSOC);
+
+$sqlSelectSize="SELECT size_id, size_name FROM `size` ";
+$statementSelectSize = $connection->query($sqlSelectSize);
+$sizes = $statementSelectSize->fetchAll(PDO::FETCH_ASSOC);
 
 
 $sqlProduit='SELECT produit_index, produit_nom,produit_prix,produit_desc,produit_img,size.size_name,material.material_name
 FROM produit
-INNER JOIN produit_material ON produit.produit_index = produit_material.id_produit
-INNER JOIN material ON material.material_id = produit_material.id_material
-INNER JOIN produit_size ON produit.produit_index = produit_size.id_size
-INNER JOIN size ON size.size_id = produit_size.id_size';
+LEFT JOIN produit_material ON produit.produit_index = produit_material.id_produit
+LEFT JOIN material ON material.material_id = produit_material.id_material
+LEFT JOIN produit_size ON produit.produit_index = produit_size.id_produit
+LEFT JOIN size ON size.size_id = produit_size.id_size';
 $statement=$connection->query($sqlProduit);
 $produitsData = $statement->fetchAll();
 $produitFactory=new ProduitFactory();
@@ -18,6 +25,26 @@ foreach ($produitsData as $produitData) {
 }
 $produitsFiltred  = new BeanieFilter($produits, $_POST);
 
+if (isset($_GET['delete']))  {?>
+    <div class="alert alert-success" role="alert">delete!!bravo</div>
+
+<?php
+    $sqlDeleteMat="DELETE FROM `produit_material` WHERE id_produit=:id_produit ";
+    $statementDeleteMat = $connection->prepare($sqlDeleteMat);
+    $statementDeleteMat->bindValue('id_produit',$_GET['index'],PDO::PARAM_STR);
+    $statementDeleteMat->execute();
+
+    $sqlDeleteSize="DELETE FROM `produit_size` WHERE id_produit=:id_produit ";
+    $statementDeleteSize = $connection->prepare($sqlDeleteSize);
+    $statementDeleteSize->bindValue('id_produit',$_GET['index'],PDO::PARAM_STR);
+    $statementDeleteSize->execute();
+
+    $sqlDeleteProduit="DELETE FROM `produit` WHERE produit_index=:produit_index ";
+    $statementDeleteProduit = $connection->prepare($sqlDeleteProduit);
+    $statementDeleteProduit->bindValue('produit_index',$_GET['index'],PDO::PARAM_STR);
+    $statementDeleteProduit->execute();
+
+}
 
 
 ?>
@@ -78,6 +105,12 @@ $produitsFiltred  = new BeanieFilter($produits, $_POST);
         <th>
             desc
         </th>
+        <th>
+            taille
+        </th>
+        <th>
+            matiere
+        </th>
 
         <th>
             panier
@@ -87,6 +120,7 @@ $produitsFiltred  = new BeanieFilter($produits, $_POST);
 
     <?php foreach ($produitsFiltred->getResult() as $produit) {
         displayBonnet($produit);
+
     } ?>
 
 </table>

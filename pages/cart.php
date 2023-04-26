@@ -18,6 +18,7 @@ if ($isCartModified) {
         <th>nom</th>
         <th>prix</th>
         <th>quantite</th>
+
         <th>prix</th>
     </tr>
     </thead>
@@ -31,7 +32,7 @@ if ($isCartModified) {
 FROM produit
 INNER JOIN produit_material ON produit.produit_index = produit_material.id_produit
 INNER JOIN material ON material.material_id = produit_material.id_material
-INNER JOIN produit_size ON produit.produit_index = produit_size.id_size
+INNER JOIN produit_size ON produit.produit_index = produit_size.id_produit
 INNER JOIN size ON size.size_id = produit_size.id_size WHERE produit_index=:produit_index';
     $statement=$connection->prepare($sqlProduit);
     $statement->bindParam(':produit_index',$produit_index);
@@ -52,6 +53,8 @@ INNER JOIN size ON size.size_id = produit_size.id_size WHERE produit_index=:prod
         $price = $produit->getPrix() * $quantity;
         $total += $price;
 
+        var_dump($produit->getSizes());
+
         ?>
 
 
@@ -64,6 +67,9 @@ INNER JOIN size ON size.size_id = produit_size.id_size WHERE produit_index=:prod
             </td>
             <td>
                 <?= $produit->getPrix(); ?>
+            </td>
+            <td>
+                <?php foreach ($produit->getSizes() as $size) {echo $size;}; ?>
             </td>
 
             <td>
