@@ -1,4 +1,6 @@
 <?php
+namespace Service;
+use Model\Produit;
 
 class ProduitFactory
 {

@@ -1,4 +1,7 @@
 <?php
+
+use Model\Produit;
+
 function tva(float $prixTTC): float
 {
     return $prixTTC / 1.2;

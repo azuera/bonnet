@@ -1,5 +1,9 @@
 <?php
 
+use Model\Produit;
+use Service\BeanieFilter;
+use Service\ProduitFactory;
+
 $sqlSelectMat="SELECT material_id, material_name FROM `material` ";
 $statementSelectMat = $connection->query($sqlSelectMat);
 $materials = $statementSelectMat->fetchAll(PDO::FETCH_ASSOC);

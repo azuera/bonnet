@@ -6,12 +6,20 @@
   <component name="ChangeListManager">
     <list default="true" id="538bb65c-9596-4d63-8cfa-7153b1c2833e" name="Changes" comment="filter + refacto">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fixtures/produit.php" beforeDir="false" afterPath="$PROJECT_DIR$/fixtures/produit.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/includes/fonction.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/fonction.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/cart.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/cart.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/home.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/home.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/list.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/list.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/cart.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/cart.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/creaProduit.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/creaProduit.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/formulaire.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/formulaire.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/home.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/home.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/list.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/list.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/logout.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BeanieFilter.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/BeanieFilter.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Cart.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Cart.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Formulaire.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Formulaire.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Produit.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Produit.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ProduitFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/ProduitFactory.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,6 +78,9 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\APP\www\bonnet\includes" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\APP\www\bonnet\src\View" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -90,7 +101,8 @@
       <workItem from="1682450144796" duration="2401000" />
       <workItem from="1682452612141" duration="53000" />
       <workItem from="1682491803257" duration="10412000" />
-      <workItem from="1682508316808" duration="4224000" />
+      <workItem from="1682508316808" duration="5041000" />
+      <workItem from="1682531609453" duration="4005000" />
     </task>
     <servers />
   </component>
