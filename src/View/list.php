@@ -115,7 +115,12 @@ if (isset($_GET['delete']))  {?>
         <th>
             matiere
         </th>
-
+        <th>
+            update bonnet
+        </th>
+        <th>
+            delete de la bdd
+        </th>
         <th>
             panier
         </th>
