@@ -38,6 +38,9 @@ function displayBonnet(produit $produit): void
             <?php foreach ($produit->getMaterials() as $material) {echo $material;}; ?>
         </td>
         <td>
+            <a href="?page=updateProduit&index=<?= $produit->getIndex(); ?>" class="btn btn-info"> update</a>
+        </td>
+        <td>
             <a href="?page=list&index=<?= $produit->getIndex(); ?>&&delete" class="btn btn-danger"> delete</a>
         </td>
 
